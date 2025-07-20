@@ -7,7 +7,7 @@ export default async function PhotoModal({
 }: {
   params: Promise<{ id: string }>;
 }) {
-  const { id } = await params;
+  const id  = (await params).id;
   const photo: Photo = photos.find((p) => p.id === id)!;
 
   return (
